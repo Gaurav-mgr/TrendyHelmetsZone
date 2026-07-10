@@ -5,7 +5,10 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('welcome',[
-        'helmet' => '#Helmets'
+        'helmet' => '#Helmets',
+        'accessories' => '#Accessories',
+        'about' => '#About',
+        'contact' => '#Contact'
     ]);
 })->name('home');
 

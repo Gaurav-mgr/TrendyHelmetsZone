@@ -11,10 +11,10 @@ export default function Hero({helmetlink}:HeaderProps){
   
   return (
     <>
-      <main className="relative w-[1600px] px-8 flex items-center justify-between h-[88vh]">
+      <main id="#About" className="relative w-[1600px] px-8 flex items-center justify-between w-[1600px] h-[88vh]">
 
         {/* left */}
-        <div className="max-w-[50%] flex flex-col gap-6">
+        <div className="leftside max-w-[50%] flex flex-col gap-6">
 
           <div id="maintitle" className="flex flex-col mb-7">
             <h1 className="text-[80px] text-[#ff3635] font-[400] m-0 leading-none">
@@ -46,7 +46,7 @@ export default function Hero({helmetlink}:HeaderProps){
         </div>
 
         {/* right */}
-        <div id="mainhelmet" className="relative max-w-[50%]">
+        <div id="mainhelmet" className="rightside relative max-w-[50%]">
           <section id="heroHelmet" className="flex justify-center items-center">
             <img id="helmetimg" className="relative w-[75%] z-1" src={HeroHelmet}/>
             <div className="absolute bg-red-900/10 blur-[30px] h-[80%] w-[80%] rounded-[50%]"></div>

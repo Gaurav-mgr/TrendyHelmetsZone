@@ -1,0 +1,65 @@
+#herosec {
+  position: relative;
+}
+
+.hero-pin {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#mainsec {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+
+/* accessories fade in */
+
+.accessoriessection {
+  clip-path: inset(0 100% 0 0);
+  animation: fadein linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes fadein {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+    filter: blur(3px);
+  }
+
+  to {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+#accessory {
+  position: relative;
+  left: 0;
+  z-index: 1;
+}
+
+#contact {
+  position: absolute;
+  top: 0;
+  z-index: 2000;
+  animation: fadeleft linear both;
+  animation-timeline: view();
+  animation-range: contain 20% contain 80%;
+}
+
+@keyframes fadeleft {
+  from {
+    transform: translateX(110%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

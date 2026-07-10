@@ -3,11 +3,17 @@ import { Head, Link, usePage } from '@inertiajs/react';
 import Loading from "../components/Trendy/loading"
 import LoadingText from "../components/Trendy/loadingtext"
 import Main from "../components/Trendy/main"
-import Hero from "../components/Trendy/hero"
 import Header from "../components/Trendy/header"
+import Footer from "../components/Trendy/footer"
 
+type HomepageProps = {
+    helmet: string;
+    accessories: string;
+    about : string;
+    contact : string;
+}
 
-export default function Welcome({helmet}:{helmet:string}) {
+export default function Welcome({helmet, accessories, about, contact}:HomepageProps) {
     const { auth } = usePage<SharedData>().props;
 
     return (
@@ -22,9 +28,17 @@ export default function Welcome({helmet}:{helmet:string}) {
                 <Loading />
                 <LoadingText />
                 <div id="homepage" className="flex flex-col items-center h-[100%]">
-                    <Header helmetlink = {helmet}/>
-                    <Hero helmetlink = {helmet}/> 
-                    <Main />
+                    <Header 
+                        helmetlink = {helmet}
+                        accessorieslink = {accessories}
+                        aboutlink = {about}    
+                        contactlink = {contact}
+                    />
+                    
+                    <Main 
+                        helmetlink = {helmet}
+                    />
+                    <Footer />
                 </div>
             </div>
         </>
