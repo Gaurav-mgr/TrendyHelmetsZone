@@ -15,7 +15,7 @@ export default function Helmet(){
       
       <div id="Helmets" className="mt-[100px]"></div>
 
-      <section id="scrollingHelmet" className="relative w-[1600px] h-[400vh] mt-[100px]">
+      <section id="scrollingHelmet" className="relative w-[1600px] h-[300vh] mt-[100px]">
         <div className="sticky top-30 h-[80vh] py-4 px-8 flex flex-col gap-13 ">
           <div className="flex flex-col items-center gap-1">
             <h1 className="text-[#ff3635] text-[70px] uppercase font-bold leading-none">Helmets</h1>

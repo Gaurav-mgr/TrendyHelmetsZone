@@ -21,7 +21,7 @@ export default function Main({helmetlink}:MainProps){
         </div>
       </div>
 
-      <div className="bottompart h-[500vh]">
+      <div className="bottompart h-[300vh]">
         <div id="container" className="sticky top-30">
           <div id="accessory" className="relative">
             <Accessories />

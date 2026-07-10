@@ -51,7 +51,7 @@
   z-index: 2000;
   animation: fadeleft linear both;
   animation-timeline: view();
-  animation-range: contain 20% contain 80%;
+  animation-range: contain 30% contain 70%;
 }
 
 @keyframes fadeleft {
