@@ -28,7 +28,7 @@ export default function Footer(){
                 <div>
                     <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#cc3635]/80">Contact</h3>
                     <ul className="mt-5 space-y-3 text-sm text-gray-500">
-                        <li>support@traceit.app</li>
+                        <li>support@trendyhelmets.com</li>
                         <li>+1 (555) 123-4567</li>
                         <li>123 Inventory Ave, Suite 200</li>
                     </ul>

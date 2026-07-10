@@ -25,15 +25,15 @@ export default function Contact() {
             <dl className="mt-16 md:mt-0 space-y-6 font-mono text-sm">
               <div className="flex justify-between border-t border-[#2A2724] pt-3">
                 <dt className="text-[#8C8680] uppercase tracking-widest">Email</dt>
-                <dd className="text-[#F2EFEA]">hello@yourbrand.com</dd>
+                <dd className="text-[#F2EFEA]">trendyhelmetszone@gmail.com</dd>
               </div>
               <div className="flex justify-between border-t border-[#2A2724] pt-3">
-                <dt className="text-[#8C8680] uppercase tracking-widest">Studio</dt>
+                <dt className="text-[#8C8680] uppercase tracking-widest">Shop</dt>
                 <dd className="text-[#F2EFEA]">Kathmandu, NP</dd>
               </div>
               <div className="flex justify-between border-t border-[#2A2724] pt-3 pb-3 border-b">
                 <dt className="text-[#8C8680] uppercase tracking-widest">Hours</dt>
-                <dd className="text-[#F2EFEA]">Mon–Fri, 10–18</dd>
+                <dd className="text-[#F2EFEA]">Mon–Fri, 10–8</dd>
               </div>
             </dl>
           </div>
