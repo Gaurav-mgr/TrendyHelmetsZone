@@ -1,6 +1,13 @@
 import TrendyLogo from "../../../../public/Whitelogo.png"
 
-export default function Footer(){
+interface FooterProps {
+  helmetlink : string;
+  accessorieslink : string;
+  aboutlink : string;
+  contactlink : string;
+}
+
+export default function Footer({helmetlink, accessorieslink, aboutlink, contactlink}:FooterProps){
   return(
     <>
       <footer className="mt-[100px] border-t w-full border-[#cc3635] bg-[#131011] text-[#17201b] flex flex-col items-center">
@@ -19,9 +26,10 @@ export default function Footer(){
                 <div>
                     <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#cc3635]/80">Resources</h3>
                     <ul className="mt-5 space-y-3 text-sm">
-                        <li><a href="" className="text-gray-500 transition hover:text-[#cc3635]">Workflow preview</a></li>
-                        <li><a href="" className="text-gray-500 transition hover:text-[#cc3635]">Benefits</a></li>
-                        <li><a href="" className="text-gray-500 transition hover:text-[#cc3635]">About</a></li>
+                        <li><a className="cursor-pointer text-gray-500 hover:scale-[1.022] hover:text-[#ff3635] px-2 rounded-sm transition-all smooth duration-300 " href={aboutlink}>About</a></li>
+                        <li><a className="cursor-pointer text-gray-500 hover:scale-[1.022] hover:text-[#ff3635] px-2 rounded-sm transition-all smooth duration-300 " href={helmetlink}>Helmets</a></li>
+                        <li><a className="cursor-pointer text-gray-500 hover:scale-[1.022] hover:text-[#ff3635] px-2 rounded-sm transition-all smooth duration-300 " href={accessorieslink}>Accessories</a></li>
+                        <li><a className="cursor-pointer text-gray-500 hover:scale-[1.022] hover:text-[#ff3635] px-2 rounded-sm transition-all smooth duration-300 " href={contactlink}>Contact</a></li>
                     </ul>
                 </div>
 

@@ -28,17 +28,19 @@ export default function Welcome({helmet, accessories, about, contact}:HomepagePr
                 <Loading />
                 <LoadingText />
                 <div id="homepage" className="flex flex-col items-center h-[100%]">
-                    <Header 
-                        helmetlink = {helmet}
-                        accessorieslink = {accessories}
-                        aboutlink = {about}    
-                        contactlink = {contact}
-                    />
                     
                     <Main 
                         helmetlink = {helmet}
+                        accessorieslink = {accessories}
+                        aboutlink = {about}
+                        contactlink = {contact}
                     />
-                    <Footer />
+                    <Footer 
+                        helmetlink = {helmet}
+                        accessorieslink = {accessories}
+                        aboutlink = {about}
+                        contactlink = {contact}
+                    />
                 </div>
             </div>
         </>

@@ -3,15 +3,16 @@ import {ChevronRight, ChevronDown} from "lucide-react"
 import HeroHelmet from "../../../../public/images/Helmets/herohelmet.png"
 import "../../../css/app.css"
 
-interface HeaderProps {
+interface HeroProps {
     helmetlink : string;
+    cursorVariant : React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Hero({helmetlink}:HeaderProps){
+export default function Hero({helmetlink, cursorVariant}:HeroProps){
   
   return (
     <>
-      <main id="#About" className="relative w-[1600px] px-8 flex items-center justify-between w-[1600px] h-[88vh]">
+      <main id="#About" className="relative w-[1600px] px-8 flex items-center justify-between w-[1600px] h-[85vh]">
 
         {/* left */}
         <div className="leftside max-w-[50%] flex flex-col gap-6">
@@ -36,8 +37,12 @@ export default function Hero({helmetlink}:HeaderProps){
               </p>
             </div>
 
-            <a href={helmetlink}>
-              <button className="flex items-center justify-center cursor-pointer gap-3 bg-[#cc3635] text-white px-4 py-2 font-semibold text-[17px] rounded-sm self-start hover:bg-[#ff3635] hover:scale-[1.04] transition-all duration-450 ease-in-out">
+            <a href={helmetlink} className="w-[fit-content]">
+              <button 
+                onMouseEnter={()=>cursorVariant("button")}
+                onMouseLeave={()=>cursorVariant("default")}
+                id="heroButton" 
+               className="flex items-center justify-center cursor-pointer gap-3 bg-[#cc3635] text-white px-4 py-2 font-semibold text-[17px] rounded-sm self-start hover:bg-[#ff3635] hover:scale-[1.04] transition-all duration-450 ease-in-out">
                 EXPLORE GEAR <ChevronRight />
               </button>
             </a>
@@ -55,7 +60,11 @@ export default function Hero({helmetlink}:HeaderProps){
         </div>
 
         <a href={helmetlink}>
-          <div className="animate-bounce [animation-duration:2s] absolute bottom-0 left-[45%] flex items-center justify-center cursor-pointer gap-2  text-white p-1.5 font-semibold text-[17px] rounded-full hover:scale-[1.04] ease-in-out bg-[#fff]/20">
+          <div 
+            onMouseEnter={()=>cursorVariant("none")}
+            onMouseLeave={()=>cursorVariant("default")}
+            id="scrolldown" className="animate-bounce [animation-duration:2s] absolute bottom-0 left-[45%] flex items-center justify-center cursor-pointer gap-2  text-white p-1.5 font-semibold text-[17px] rounded-full hover:scale-[1.04] ease-in-out bg-gradient-to-r from-[#fff]/20 via-[#221f20] to-[#cc3635] bg-[length:200%_100%] bg-[position:0%_0%] hover:bg-[position:80%_0%] transition-bg [transition-duration:0.4s] ease-in-out hover:[animation-play-state:paused]"
+          >
             <p className="bg-[#221f20] px-6 py-2 rounded-full">Scroll Down</p>
             <p className="bg-[#221f20]  p-2 rounded-full"><ChevronDown /></p>
           </div>

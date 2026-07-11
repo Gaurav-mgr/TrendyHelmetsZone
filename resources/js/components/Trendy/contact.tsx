@@ -1,6 +1,9 @@
 import "../../../css/main.css"
 
-export default function Contact() {
+interface ContactProps{
+  cursorVariant : React.Dispatch<React.SetStateAction<string>>
+}
+export default function Contact({cursorVariant}:ContactProps) {
   return (
     <>
       <div id="Contact"></div>
@@ -45,6 +48,8 @@ export default function Contact() {
             <Field label="Message" name="message" type="textarea" placeholder="What are you building?" />
 
             <button
+              onMouseEnter={()=>cursorVariant("button")}
+              onMouseLeave={()=>cursorVariant("default")}
               type="submit"
               className="cursor-pointer w-[50%] bg-[#cc3635] hover:bg-[#b02e2d] text-white font-bold py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:scale-[1.01] shadow-lg shadow-[#cc3635]/20"
             >

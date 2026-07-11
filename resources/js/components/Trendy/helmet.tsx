@@ -8,7 +8,17 @@ import Studds from "../../../../public/images/Helmets/studdsHelm.png"
 
 import "../../../css/app.css"
 
-export default function Helmet(){
+interface HelmetProps {
+  cursorVariant : React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function Helmet({cursorVariant}:HelmetProps){
+  const moreButton = (<button
+                  // onMouseEnter={()=>cursorVariant("morebutton")}
+                  // onMouseLeave={()=>cursorVariant("default")}
+                  className="bg-[#ff3635] cursor-pointer flex items-center justify-center gap-2 p-2 text-white h-[44px] w-[130px] rounded-sm hover:bg-[#d13635] hover:border-2 hover:border-[#ff0000]">
+                  More Info <ChevronRight/>
+                </button>)
   return(
     <>
       {/* -------------- Helmet Section ----------------- */}
@@ -37,9 +47,7 @@ export default function Helmet(){
               <div className="flex flex-col items-start justify-center gap-6">
                 <h1 className="text-white text-[36px] font-semibold uppercase leading-none">Axor</h1>
                 <p className="text-gray-400 text-justify">Engineered for the modern track enthusiast and street rider alike, Axor helmets strike a balance between high-end performance aesthetics and aggressive styling. With ECE 22.06 and DOT-certified models regularly filling their catalog, they provide premium race-replica designs, dual-visor functionality, and sharp ventilation systems without forcing riders to break the bank.</p>
-                <button className="bg-[#ff3635] cursor-pointer flex items-center justify-center gap-2 p-2 text-white h-[44px] w-[130px] rounded-sm hover:bg-[#d13635] hover:border-2 hover:border-[#ff0000]">
-                  More Info <ChevronRight/>
-                </button>
+                {moreButton}
               </div>
             </div>
 
@@ -50,9 +58,7 @@ export default function Helmet(){
               <div className="flex flex-col items-end justify-center gap-6">
                 <h1 className="text-white text-[36px] font-semibold uppercase leading-none">Fox Racing</h1>
                 <p className="text-gray-400 text-justify">When it comes to off-road dominance, dirt tracks, and motocross culture, Fox Racing stands in a league of its own. Utilizing specialized multi-directional impact protection systems (MIPS) and aggressive chin-bar ventilation, these helmets are designed to keep riders cool under extreme physical exertion while offering unmatched cranial deflection.</p>
-                <button className="bg-[#ff3635] cursor-pointer flex items-center justify-center gap-2 p-2 text-white h-[44px] w-[130px] rounded-sm hover:bg-[#d13635] hover:border-2 hover:border-[#ff0000]">
-                  More Info <ChevronRight/>
-                </button>
+                {moreButton}
               </div>
               <div>
                 <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[350px] h-[350px]">
@@ -73,9 +79,7 @@ export default function Helmet(){
               <div className="flex flex-col items-start justify-center gap-6">
                 <h1 className="text-white text-[36px] font-semibold uppercase leading-none">ls2</h1>
                 <p className="text-gray-400 text-justify">LS2 is a global juggernaut known for bringing true track-level engineering, advanced materials, and precise fitment to mainstream riders. Utilizing premium composite fiberglass, carbon fiber, and proprietary Kinetic Polymer Alloys (KPA), LS2 structures their helmets to offer maximum shell integrity with minimum neck strain.</p>
-                <button className="bg-[#ff3635] cursor-pointer flex items-center justify-center gap-2 p-2 text-white h-[44px] w-[130px] rounded-sm hover:bg-[#d13635] hover:border-2 hover:border-[#ff0000]">
-                  More Info <ChevronRight/>
-                </button>
+                {moreButton}
               </div>
             </div>
 
@@ -86,9 +90,7 @@ export default function Helmet(){
               <div className="flex flex-col items-end justify-center gap-6">
                 <h1 className="text-white text-[36px] font-semibold uppercase leading-none">studds</h1>
                 <p className="text-gray-400 text-justify">As one of the largest, famous, and most trusted helmet manufacturers in the world, Studds is synonymous with ultimate reliability, daily durability, stylish appearance, and accessible safety. Built to withstand the rigorous wear-and-tear of daily city commuting and long-haul riding, Studds helmets focuses on functional engineering, high-impact thermoplastic shells, and hypoallergenic comfort liners.</p>
-                <button className="bg-[#ff3635] cursor-pointer flex items-center justify-center gap-2 p-2 text-white h-[44px] w-[130px] rounded-sm hover:bg-[#d13635] hover:border-2 hover:border-[#ff0000]">
-                  More Info <ChevronRight/>
-                </button>
+                {moreButton}
               </div>
               <div>
                 <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[350px] h-[350px]">

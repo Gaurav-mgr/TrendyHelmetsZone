@@ -21,7 +21,7 @@
   clip-path: inset(0 100% 0 0);
   animation: fadein linear both;
   animation-timeline: view();
-  animation-range: entry 0% entry 100%;
+  animation-range: entry 20% entry 100%;
 }
 
 @keyframes fadein {
@@ -62,4 +62,27 @@
   to {
     transform: translateX(0);
   }
+}
+
+.cursor {
+  height: 15px;
+  width: 15px;
+  background: #cc3635;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999999999;
+  display: none;
+}
+
+.cursor.button {
+  transform: scale(5);
+  mix-blend-mode: hard-light;
+  filter: blur(8px);
+  display: block;
+  /* transition: .2s ease-in-out; */
+}
+
+.cursor.none {
+  display: none;
 }

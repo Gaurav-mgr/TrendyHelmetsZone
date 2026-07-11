@@ -9,7 +9,11 @@ import Bag from "../../../../public/images/Accessories/Bag.png"
 
 import "../../../css/main.css"
 
-export default function Accessories(){
+interface AccessoriesProps{
+  cursorVariant: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function Accessories({cursorVariant}:AccessoriesProps){
   return(
     <>
       {/* -------------- Accessories Section ------------- */}
@@ -22,7 +26,7 @@ export default function Accessories(){
         </div>
 
         <div className=" accessoriessection flex gap-6 w-full items-stretch max-h-[80%]">
-          <div id="accessoriessection" className="overflow-hidden w-[50%] grid grid-cols-3 grid-rows-4 gap-1 cursor-pointer">
+          <div id="accessoriessection" className="overflow-hidden w-[50%] grid grid-cols-3 grid-rows-4 gap-3 cursor-pointer">
             {/* Row of Accessories */}
             <div className="group col-span-3 row-span-1 bg-[#221f20] px-5 py-2 rounded-xl border-2 border-[#cc3635]/40 overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#221f20] via-[#221f20] to-[#cc3635] bg-[length:300%_100%] bg-[position:0%_0%] 
             hover:bg-[position:80%_0%] transition-all duration-300 ease-in-out">
@@ -107,7 +111,10 @@ export default function Accessories(){
 
             {/* CTA Button */}
             <div className="mt-8">
-              <button className="cursor-pointer w-full bg-[#cc3635] hover:bg-[#b02e2d] text-white font-bold py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:scale-[1.01] shadow-lg shadow-[#cc3635]/20">
+              <button 
+                onMouseEnter={()=>cursorVariant("button")}
+                onMouseLeave={()=>cursorVariant("default")}
+                id="accessoryButton" className="cursor-pointer w-full bg-[#cc3635] hover:bg-[#b02e2d] text-white font-bold py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:scale-[1.01] shadow-lg shadow-[#cc3635]/20">
                 EXPLORE ALL ACCESSORIES
               </button>
             </div>

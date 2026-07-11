@@ -162,6 +162,7 @@
 
 body {
     overflow-x: hidden;
+
 }
 
 /* homepage */
@@ -265,18 +266,18 @@ body {
 /* hero section animations */
 
 #heroHelmet {
-    animation: rightleft 3s infinite ease-in-out alternate;
+    animation: rightleft 2s infinite ease-in-out alternate;
     transform-origin: bottom right;
 }
 
 
 @keyframes rightleft {
     from {
-        transform: rotate(-0.5deg);
+        transform: rotate(-1deg);
     }
 
     to {
-        transform: rotate(0.5deg);
+        transform: rotate(1deg);
     }
 }
 
