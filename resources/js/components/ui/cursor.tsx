@@ -9,7 +9,7 @@ interface CursorProps{
 
 export default function Cursor({x, y, variant}:CursorProps){
   return(
-    <div className={`cursor ${variant}`}
+    <div className={`cursor ${variant} z-9999999999`}
       style={{
         left: x ,
         top: y

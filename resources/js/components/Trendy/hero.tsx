@@ -12,10 +12,10 @@ export default function Hero({helmetlink, cursorVariant}:HeroProps){
   
   return (
     <>
-      <main id="#About" className="relative w-[1600px] px-8 flex items-center justify-between w-[1600px] h-[85vh]">
+      <main id="#About" className="maincont relative w-[1600px] px-8 flex items-center justify-between w-[1600px] h-[85vh] ">
 
         {/* left */}
-        <div className="leftside max-w-[50%] flex flex-col gap-6">
+        <div className="goleft leftside max-w-[50%] flex flex-col gap-6">
 
           <div id="maintitle" className="flex flex-col mb-7">
             <h1 className="text-[80px] text-[#ff3635] font-[400] m-0 leading-none">
@@ -42,18 +42,17 @@ export default function Hero({helmetlink, cursorVariant}:HeroProps){
                 onMouseEnter={()=>cursorVariant("button")}
                 onMouseLeave={()=>cursorVariant("default")}
                 id="heroButton" 
-               className="flex items-center justify-center cursor-pointer gap-3 bg-[#cc3635] text-white px-4 py-2 font-semibold text-[17px] rounded-sm self-start hover:bg-[#ff3635] hover:scale-[1.04] transition-all duration-450 ease-in-out">
+               className="flex items-center justify-center cursor-pointer gap-3 bg-[#cc3635] text-white px-4 py-2 font-semibold text-[17px] rounded-sm self-start border-1 border-[#cc3635] hover:bg-transparent hover:text-[#cc3635] hover:scale-[1.04] transition-all duration-500 ease-in-out">
                 EXPLORE GEAR <ChevronRight />
               </button>
             </a>
           </div>
-
         </div>
 
         {/* right */}
-        <div id="mainhelmet" className="rightside relative max-w-[50%]">
+        <div id="mainhelmet" className="goright rightside relative max-w-[50%]">
           <section id="heroHelmet" className="flex justify-center items-center">
-            <img id="helmetimg" className="relative w-[75%] z-1" src={HeroHelmet}/>
+            <img className="relative w-[75%] z-1" src={HeroHelmet}/>
             <div className="absolute bg-red-900/10 blur-[30px] h-[80%] w-[80%] rounded-[50%]"></div>
           </section>
           <div className="z-2 flex justify-center items-center absolute bg-[#f5f5f5]/30 h-[50px] w-[340px] bottom-6 right-30 rounded-lg text-white text-[20px] shadow-lg shadow-black/30 border-b-1 border-[#fff]">ECE 22.06 &nbsp; | &nbsp; DOT &nbsp; | &nbsp; SNELL</div>

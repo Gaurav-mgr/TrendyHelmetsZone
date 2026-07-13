@@ -5,6 +5,7 @@ import Axor from "../../../../public/images/Helmets/axorHelmet.png"
 import Fox from "../../../../public/images/Helmets/fox.png"
 import Ls2 from "../../../../public/images/Helmets/ls2.png"
 import Studds from "../../../../public/images/Helmets/studdsHelm.png"
+import Vega from "../../../../public/images/Helmets/vega.png"
 
 import "../../../css/app.css"
 
@@ -25,19 +26,28 @@ export default function Helmet({cursorVariant}:HelmetProps){
       
       <div id="Helmets" className="mt-[100px]"></div>
 
-      <section id="scrollingHelmet" className="relative w-[1600px] h-[300vh] mt-[100px]">
+      <section id="scrollingHelmet" className="relative w-[1600px] h-[190vh] mt-[100px]">
         <div className="sticky top-30 h-[80vh] py-4 px-8 flex flex-col gap-13 ">
           <div className="flex flex-col items-center gap-1">
             <h1 className="text-[#ff3635] text-[70px] uppercase font-bold leading-none">Helmets</h1>
-            <p className="text-[#6f6f6f] m-0 leading-none">We've got differnt helmets of different known brands with utmost reliability.</p>
           </div>
 
           {/* perspective container */}
           <div className="relative flex justify-center items-center h-full " style={{ perspective: '1400px' }}>
+            {/* heading */}
+            <div id="topseller" className="absolute z-6 bottom-0 border-t-1 border-[#cc3635]  flex justify-center items-center">
+              <span className="text-[#cc3635] uppercase tracking-[0.3em] text-sm font-semibold text-center">
+                  Choose the best
+                </span>
+
+              <h2 className="mt-4 text-6xl font-bold leading-tight text-center text-white">
+                Our <span className="text-[#cc3635]"> Top Sellers.</span>
+              </h2>
+            </div>
 
             {/* axor */}
             <div
-              className="absolute z-4 max-h-[100%] top-25 left-15  card-axor flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[45%]"
+              className="absolute z-5 max-h-[100%] top-10 left-15  card-axor flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[45%]"
             >
               <div>
                 <div className="group cursor-pointer flex items-center overflow-hidden justify-center w-[100%] h-[100%]">
@@ -53,7 +63,7 @@ export default function Helmet({cursorVariant}:HelmetProps){
 
             {/* fox */}
             <div
-              className="absolute z-3 bottom-14 -right-15 card-fox max-h-[100%] flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[45%]"
+              className="absolute z-4 bottom-10 -right-15 card-fox max-h-[100%] flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[45%]"
             >
               <div className="flex flex-col items-end justify-center gap-6">
                 <h1 className="text-white text-[36px] font-semibold uppercase leading-none">Fox Racing</h1>
@@ -69,7 +79,7 @@ export default function Helmet({cursorVariant}:HelmetProps){
 
             {/* ls2 */}
             <div
-              className="absolute z-2 top-24 left-86 card-ls2 max-h-[100%] flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[50%]"
+              className="absolute z-3 top-12 left-86 card-ls2 max-h-[100%] flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[50%]"
             >
               <div>
                 <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[350px] h-[350px]">
@@ -85,7 +95,7 @@ export default function Helmet({cursorVariant}:HelmetProps){
 
             {/* studds */}
             <div
-              className="absolute z-1 bottom-22 right-38 card-studds max-h-[100%] flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[50%]"
+              className="absolute z-2 bottom-17 right-38 card-studds max-h-[100%] flex gap-5 bg-[#221f20] px-8 py-6 rounded-3xl border-2 border-[#cc3635]/40 max-w-[50%]"
             >
               <div className="flex flex-col items-end justify-center gap-6">
                 <h1 className="text-white text-[36px] font-semibold uppercase leading-none">studds</h1>
@@ -95,6 +105,70 @@ export default function Helmet({cursorVariant}:HelmetProps){
               <div>
                 <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[350px] h-[350px]">
                   <img className="w-[80%] group-hover:scale-[1.18] transition-all smooth duration-600" src={Studds} />
+                </div>
+              </div>
+            </div>
+
+            {/* more helmets */}
+            <div
+              className="absolute z-1 bg-[#131011] top-0 left-0 card-allHelmets h-[65vh] flex flex-col justify-center items-center gap-15 px-8 py-6 w-full"
+            >
+
+              {/* Description */}
+              <div className="w-[60%] flex flex-col justify-center items-center">
+                <span className="text-[#cc3635] uppercase tracking-[0.3em] text-sm font-semibold text-center">
+                  Discover More Helmets
+                </span>
+
+                <h2 className="mt-4 text-5xl font-bold leading-tight text-center text-white">
+                  Ride with <span className="text-[#cc3635]"> Confidence.</span>
+                </h2>
+
+                <p className="mt-6 text-[15px] leading-7 text-center text-gray-300">
+                  Discover premium helmets from industry-leading brands built for every
+                  riding style. Whether you prefer aggressive racing, touring, or everyday
+                  commuting, our collection combines safety, comfort, and modern design.
+                </p>
+
+                <button
+                  onMouseEnter={()=>cursorVariant("button")}
+                  onMouseLeave={()=>cursorVariant("default")}
+                 className="cursor-pointer group mt-8 w-fit rounded-md border border-[#cc3635] bg-[#cc3635] px-7 py-3 font-medium text-white hover:bg-transparent hover:text-[#cc3635] transition-all duration-500">
+                  Explore Collection
+                </button>
+              </div>
+
+              {/* helmet row */}
+              <div className="flex items-start justify-between w-[100%] gap-6">
+                {/* axor */}
+                <div className="bg-[#221f20] border-1 border-[#cc3635] hover:border-[#0000ff] rounded-xl saturate-20 hover:bg-gradient-to-r via-[#221f20] to-[#0000ff] bg-[length:300%_100%] bg-[posttion:0%_0%] hover:bg-[position:90%_0%] hover:saturate-100 duration-700">
+                  <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[260px] h-[260px]">
+                    <img className="w-[80%] group-hover:scale-[1.18] transition-all smooth duration-600" src={Axor} />
+                  </div>
+                </div>
+                {/* vega */}
+                <div className="bg-[#221f20] border-1 border-[#cc3635] hover:border-[#ffd700] rounded-xl saturate-20 bg-gradient-to-r from-[#221f20] via-[#221f20] to-[#ffd700] bg-[length:300%_100%] bg-[posttion:0%_0%] hover:bg-[position:90%_0%] hover:saturate-100 duration-700">
+                  <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[260px] h-[260px]">
+                    <img className="w-[65%] group-hover:scale-[1.18] transition-all smooth duration-600" src={Vega} />
+                  </div>
+                </div>
+                {/* fox */}
+                <div className="bg-[#221f20] border-1 border-[#cc3635] hover:border-[#ff0000] rounded-xl saturate-20 bg-gradient-to-r from-[#221f20] via-[#221f20] to-[#ff0000] bg-[length:300%_100%] bg-[posttion:0%_0%] hover:bg-[position:90%_0%] hover:saturate-100 duration-700">
+                  <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[260px] h-[260px]">
+                    <img className="w-[65%] group-hover:scale-[1.18] transition-all smooth duration-600" src={Fox} />
+                  </div>
+                </div>
+                {/* ls2 */}
+                <div className="bg-[#221f20] border-1 border-[#cc3635] hover:border-[#BF00FF] rounded-xl saturate-20 bg-gradient-to-r from-[#221f20] via-[#221f20] to-[#BF00FF] bg-[length:300%_100%] bg-[posttion:0%_0%] hover:bg-[position:90%_0%] hover:saturate-100 duration-700">
+                  <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[260px] h-[260px]">
+                    <img className="w-[80%] group-hover:scale-[1.18] transition-all smooth duration-600" src={Ls2} />
+                  </div>
+                </div>
+                {/* studds */}
+                <div className="bg-[#221f20] border-1 border-[#cc3635] hover:border-[#00ffff] rounded-xl saturate-20 bg-gradient-to-r from-[#221f20] via-[#221f20] to-[#00ffff] bg-[length:250%_100%] bg-[posttion:0%_0%] hover:bg-[position:100%_0%] hover:saturate-100 duration-700">
+                  <div className="group cursor-pointer relative flex items-center overflow-hidden justify-center w-[260px] h-[260px]">
+                    <img className="w-[70%] group-hover:scale-[1.18] transition-all smooth duration-600" src={Studds} />
+                  </div>
                 </div>
               </div>
             </div>

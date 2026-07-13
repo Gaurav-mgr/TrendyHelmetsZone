@@ -247,21 +247,6 @@ body {
     border-bottom: 2px solid #cc3635;
 }
 
-/* #header:hover {
-    animation-play-state: paused;
-    cursor: pointer;
-} */
-
-@keyframes headani {
-    from {
-        transform: translateY(-3px);
-    }
-
-    to {
-        transform: translateY(3px);
-    }
-}
-
 
 /* hero section animations */
 
@@ -270,6 +255,24 @@ body {
     transform-origin: bottom right;
 }
 
+.maincont {
+    animation: mainfadeout forwards;
+    animation-timeline: scroll();
+}
+
+@keyframes mainfadeout {
+    0% {
+        filter: blur(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    25% {
+        filter: blur(10px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 
 @keyframes rightleft {
     from {
@@ -280,7 +283,6 @@ body {
         transform: rotate(1deg);
     }
 }
-
 
 #maintitle {
     animation: downslide 3.5s ease-in;
@@ -328,149 +330,47 @@ body {
     }
 }
 
-
-/* .leftside {
-    animation: scalingheroleft linear both;
-    animation-timeline: view();
-    animation-range: exit 0% exit 100%;
-}
-
-.rightside {
-    animation: scalingheroright linear both;
-    animation-timeline: view();
-    animation-range: exit 0% exit 100%;
-}
-
-@keyframes scalingheroleft {
-    0% {
-        transform: translateX(0) scale(1);
-    }
-
-    100% {
-        transform: translateX(-80%) scale(2);
-        filter: blur(60px);
-        opacity: 0;
-
-    }
-}
-
-@keyframes scalingheroright {
-    0% {
-        transform: translateX(0) scale(1);
-    }
-
-    100% {
-        transform: translateX(80%) scale(2);
-        filter: blur(60px);
-        opacity: 0;
-        display: none;
-    }
-} */
-
-/* ---------------------------------------- */
-
-/* helmet scrolling effect */
-
-/* #scrollingHelmet {
-    animation: scrolling linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 15%;
-} */
-
-
-/* #helmetsection {
-    box-shadow: 0 5px 60px 3px #cc35352a;
-} */
-
-/* .left {
-    animation: rightslide ease-in-out forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 25%;
-}
-
-.right {
-    animation: leftslide ease-in-out forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 25%;
-}
-
-@keyframes scrolling {
-    0% {
-        opacity: 0;
-        filter: blur(20px);
-    }
-
-    80% {
-        opacity: 1;
-        filter: blur(5px);
-    }
-
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-
-@keyframes rightslide {
-    from {
-        transform: translateX(-50%);
-        opacity: 0;
-        filter: blur(30px);
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes leftslide {
-    from {
-        transform: translateX(50%);
-        opacity: 0;
-        filter: blur(30px);
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-        filter: blur(0);
-    }
-} */
-
 #scrollingHelmet {
     view-timeline-name: --helmet-timeline;
     view-timeline-axis: block;
 
     animation: scrolling linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 15%;
+    animation-range: entry 0% cover 20%;
 }
 
 /* axor */
 .card-axor {
     animation: axorPass linear both;
-    animation-range: contain 10% contain 95%;
+    animation-range: contain 0% contain 69%;
 }
 
 /* fox */
 .card-fox {
     animation: foxPass linear both;
-    animation-range: contain 35% contain 95%;
+    animation-range: contain 13% contain 69%;
 }
 
 /* ls2 */
 .card-ls2 {
     animation: ls2Pass linear both;
-    animation-range: contain 45% contain 95%;
+    animation-range: contain 20% contain 69%;
 }
 
 /* fox */
 .card-studds {
     animation: studdsPass linear both;
-    animation-range: contain 55% contain 95%;
+    animation-range: contain 27% contain 69%;
+}
+
+#topseller {
+    animation: sellerPass linear both;
+    animation-range: contain 20% contain 45%;
+}
+
+.card-allHelmets {
+    animation: allHelmetsPass linear both;
+    animation-range: contain 35% contain 90%;
 }
 
 
@@ -482,35 +382,26 @@ body {
     animation-timeline: --helmet-timeline;
 }
 
+.card-allHelmets,
+#topseller {
+    animation-timeline: --helmet-timeline;
+}
+
 @keyframes scrolling {
     0% {
         opacity: 0;
-        filter: blur(15px);
     }
 
     80% {
+        top: 0;
         opacity: 1;
-        filter: blur(7px);
     }
 
     100% {
         opacity: 1;
-        filter: blur(0);
     }
 }
 
-
-@keyframes accessoriesoverlay {
-    0% {
-        transform: scale(0.2) translateY(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1) translateY(0);
-        opacity: 1;
-    }
-}
 
 @keyframes axorPass {
     0% {
@@ -518,7 +409,7 @@ body {
     }
 
     100% {
-        transform: perspective(1900px) rotateY(30deg) translateZ(90px) scale(1) translateX(-100%);
+        transform: perspective(1400px) rotateY(30deg) translateZ(90px) scale(1) translateX(-200%);
         display: none;
     }
 }
@@ -529,7 +420,7 @@ body {
     }
 
     100% {
-        transform: perspective(1400px) rotateY(-30deg) translateZ(-90px) scale(1) translateX(100%);
+        transform: perspective(1400px) rotateY(-30deg) translateZ(-90px) scale(1) translateX(200%);
         display: none;
     }
 }
@@ -540,7 +431,8 @@ body {
     }
 
     100% {
-        transform: perspective(1400px) rotateY(0deg) translateZ(90px) scale(0.8) translateX(-50%);
+        transform: perspective(1400px) rotateY(40deg) translateZ(90px) scale(0.65) translateX(-200%);
+        display: none;
     }
 }
 
@@ -550,6 +442,50 @@ body {
     }
 
     100% {
-        transform: perspective(1400px) rotateY(0deg) translateZ(90px) scale(0.777) translateX(25%);
+        transform: perspective(1400px) rotateY(-40deg) translateZ(90px) scale(0.47) translateX(200%);
+        display: none;
     }
+}
+
+@keyframes sellerPass {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(18px);
+    }
+}
+
+@keyframes allHelmetsPass {
+    0% {
+        transform: translateY(10%);
+        filter: blur(10px);
+        opacity: 0;
+        scale: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.goupbutton {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.goupbutton.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0);
+    pointer-events: auto;
 }

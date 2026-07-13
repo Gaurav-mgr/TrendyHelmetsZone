@@ -21,7 +21,14 @@
   clip-path: inset(0 100% 0 0);
   animation: fadein linear both;
   animation-timeline: view();
-  animation-range: entry 20% entry 100%;
+  animation-range: entry 0% cover 40%;
+}
+
+.partsection {
+  clip-path: inset(0 0 0 100%);
+  animation: fadeinpart linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 @keyframes fadein {
@@ -38,29 +45,39 @@
   }
 }
 
-
-#accessory {
-  position: relative;
-  left: 0;
-  z-index: 1;
-}
-
-#contact {
-  position: absolute;
-  top: 0;
-  z-index: 2000;
-  animation: fadeleft linear both;
-  animation-timeline: view();
-  animation-range: contain 30% contain 70%;
-}
-
-@keyframes fadeleft {
+@keyframes fadeinpart {
   from {
-    transform: translateX(110%);
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+    filter: blur(3px);
   }
 
   to {
-    transform: translateX(0);
+    clip-path: inset(0 0 0 0%);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+#fadeup {
+  animation: fadeup linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+
+  70% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -80,6 +97,7 @@
   mix-blend-mode: hard-light;
   filter: blur(8px);
   display: block;
+  cursor: none;
   /* transition: .2s ease-in-out; */
 }
 

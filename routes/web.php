@@ -8,7 +8,8 @@ Route::get('/', function () {
         'helmet' => '#Helmets',
         'accessories' => '#Accessories',
         'about' => '#About',
-        'contact' => '#Contact'
+        'contact' => '#Contact',
+        'parts' => '#Parts'
     ]);
 })->name('home');
 

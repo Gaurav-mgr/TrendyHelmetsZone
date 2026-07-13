@@ -2,10 +2,12 @@ import {useState} from "react"
 import Hero from "./hero"
 import Helmet from "./helmet"
 import Accessories from "./accessories"
+import Parts from "./parts"
 import Contact from "./contact"
 import Header from "./header"
 
 import Cursor from "../ui/cursor"
+
 
 import "../../../css/main.css"
 
@@ -14,8 +16,9 @@ interface MainProps{
   accessorieslink : string;
   aboutlink : string;
   contactlink : string;
+  partslink: string;
 }
-export default function Main({helmetlink, accessorieslink, aboutlink, contactlink}:MainProps){
+export default function Main({helmetlink, accessorieslink, partslink, aboutlink, contactlink}:MainProps){
 
   const [cursorVariant, setCursorVariant] = useState<string>("default");
   const [cursorX, setCursorX] = useState<number | undefined>()
@@ -33,29 +36,26 @@ export default function Main({helmetlink, accessorieslink, aboutlink, contactlin
         accessorieslink = {accessorieslink}
         aboutlink = {aboutlink}    
         contactlink = {contactlink}
+        partslink={partslink}
       />
-      <div id="herosec" className="relative bg-[#131011]">
-        <div className="hero-pin">
-          <Hero 
-            helmetlink = {helmetlink}
-            cursorVariant = {setCursorVariant}
-          />
-        </div>
-        <div id="mainsec" className="sticky bg-[#131011]">
-          <Helmet cursorVariant = {setCursorVariant}/>
-        </div>
-      </div>
-
-      <div className="bottompart h-[250vh]">
-        <div id="container" className="sticky top-30">
-          <div id="accessory" className="relative">
-            <Accessories cursorVariant={setCursorVariant}/>
-            <div id="contact" className="absolute">
-              <Contact cursorVariant={setCursorVariant}/>
-            </div>
+      <div className="relative h-full">
+        <div id="herosec" className="relative bg-[#131011]">
+          <div className="hero-pin">
+            <Hero 
+              helmetlink = {helmetlink}
+              cursorVariant = {setCursorVariant}
+            />
+          </div>
+          <div id="mainsec" className="sticky bg-[#131011]">
+            <Helmet cursorVariant = {setCursorVariant}/>
           </div>
         </div>
+        <Accessories cursorVariant={setCursorVariant}/>
+        <Parts cursorVariant={setCursorVariant}/>
+        <Contact cursorVariant={setCursorVariant}/>
       </div>
+
+
 
       <Cursor 
         x={cursorX}
